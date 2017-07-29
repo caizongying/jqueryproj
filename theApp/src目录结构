@@ -1,0 +1,66 @@
+src目录结构
+
+
+
+所有资源文件（如图片，字体等）
+
+页面，该页面对应的js css
+
+公共的js css
+公共的js当中又分
+
+插件类js  //如下拉菜单，滚动面板等
+
+工具类js  //常用的函数，如包装好的ajax等
+
+模版目录 //用来保存复用的html格式文件
+
+框架目录
+
+
+要求：
+页面的js单独绑定加载
+res的原封不动移动
+
+assets中的plugin和utils打包为单独的一个js文件和css文件
+
+
+
+
+src结构
+
+├─assets
+│  ├─css
+│  │      app.less
+│  │      
+│  ├─js
+│  │  ├─plugin
+│  │  └─utils
+│  ├─res
+│  │  └─img
+│  └─template
+│          fuck.html
+│          
+└─pages
+    │  index.js
+    │  
+    └─index
+            index.html
+            index.js
+            index.less
+
+
+
+dist结构
+│  app.js			//将assets/js中的js文件打包在一起
+│  index.html		//将pages中的html文件全部copy过来
+│  vender.js        //将bootstrap的js文件和jquery打包在一起
+├─pages
+│      index.css	//将pages中的less文件全部打包成一个css文件
+│      index.js     //将pages中的js文件全部打包成一个js文件
+├─template
+└─res
+    └─bootstrap     //将bootstrap的fonts等文件移过来
+        ├─css
+        │      app.css
+        └─fonts
